@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #222;
+  --ff-primary: "Nunito", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+}
+body {
+  background: var(--main-color);
+  font-family: var(--ff-primary);
+}
+.box-1 {
+  background: white;
+  height: 35rem;
+  width: 30rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: var(--transition);
+  position: relative;
+}
+.box-2 {
+  background: white;
+  height: 35rem;
+  width: 30rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: var(--transition);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.player-1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 600;
+  transition: var(--transition);
+  color: var(--main-color);
+}
+.player-1-score {
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  color: var(--main-color);
+}
+.player-2 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 600;
+  transition: var(--transition);
+  color: var(--main-color);
+}
+.player-2-score {
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  color: var(--main-color);
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+.current {
+  padding: 1rem;
+  background: var(--main-color);
+  width: 10rem;
+  margin: auto;
+  margin-top: 10rem;
+  border-radius: 10px;
+}
+.current h4 {
+  color: white;
+  font-weight: 100;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+.current-one-score {
+  margin-top: 0.5rem;
+  color: white;
+  text-align: center;
+}
+.current-two-score {
+  margin-top: 0.5rem;
+  color: white;
+  text-align: center;
+}
+.btn {
+  border: none;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 100;
+  border-radius: 50px;
+  position: absolute;
+  right: -91.45px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+.btn:active {
+  transform: translateY(5px);
+}
+.btn h1 {
+  margin-left: 0.75rem;
+  font-weight: 100;
+  font-family: var(--ff-primary);
+}
+.dice {
+  position: absolute;
+  right: -75px;
+  margin-top: 8rem;
+  width: 150px;
+  color: hsl(126, 25%, 38%);
+}
+.none {
+  display: none;
+}
+.new-game-btn {
+  margin-top: 2rem;
+}
+.roll-dice-btn {
+  margin-top: 24rem;
+  right: -89.29px;
+}
+.hold-btn {
+  margin-top: 28rem;
+  right: -65.01px;
+}
+.fa-dice {
+  font-size: 1.5rem;
+}
+.hold {
+  font-size: 1.5rem;
+}
+.fa-recycle {
+  font-size: 1.5rem;
+}
+.main-color {
+  background-color: hsla(0, 0%, 100%, 0.8);
+}
+.transparent-color {
+  background-color: hsl(0, 0%, 100%, 0.5);
+}
+.weight-thin {
+  font-weight: 500;
+}
+.weight-bold {
+  font-weight: 600;
+}
+.won {
+  background-color: #222;
+}
+@media screen and (max-width: 1020px) {
+  main {
+    width: 95%;
+    margin: auto;
+  }
+  .new-game-btn {
+    margin-top: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    height: max-content;
+  }
+  .box-1 {
+    width: 30rem;
+    height: 30rem;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    margin-top: 1.5rem;
+  }
+  .box-2 {
+    width: 30rem;
+    height: 30rem;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    margin-bottom: 1.5rem;
+  }
+  .dice {
+    right: 0;
+  }
+  .btn {
+    right: 10px;
+    bottom: -25px;
+    justify-content: center;
+    width: 4rem;
+    border-radius: 50px;
+  }
+  .dice {
+    transform: translate(-50%, -50%);
+    right: 0;
+    left: 50%;
+    margin-top: 30rem;
+  }
+  .player-2 {
+    margin-top: 3rem;
+  }
+  .new-game-btn {
+    margin-top: 0rem;
+    right: 19px;
+    width: 9rem;
+    height: 48px;
+  }
+  .new-game-btn h1 {
+    display: none;
+    /* font-size: 0.7rem; */
+  }
+  .roll-dice-btn {
+    margin-top: 24rem;
+    left: 20px;
+    right: 70%;
+  }
+  .roll-dice-btn h1 {
+    display: none;
+  }
+  .hold-btn {
+    margin-top: 28rem;
+    left: 100px;
+    right: 70%;
+  }
+  .hold-btn h1 {
+    display: none;
+  }
+  .current {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .box-1 {
+    width: 18rem;
+    height: 27rem;
+  }
+  .box-2 {
+    width: 18rem;
+    height: 27rem;
+    margin-bottom: 5rem;
+  }
+  .player-1 {
+    margin-top: -1rem;
+  }
+  .player-2 {
+    margin-top: 1rem;
+  }
+  .dice {
+    margin-top: 27rem;
+  }
+  .roll-dice-btn {
+    top: 31rem;
+    height: 3rem;
+    width: max-content;
+  }
+  .hold-btn {
+    top: 27rem;
+    height: 3rem;
+    width: max-content;
+    left: 7rem;
+  }
+  .new-game-btn {
+    top: 55rem;
+    height: 3rem;
+    width: max-content;
+  }
+}
+@media screen and (max-height: 560px) {
+  main {
+    height: max-content;
+  }
+}
